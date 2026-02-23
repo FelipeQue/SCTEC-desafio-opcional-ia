@@ -28,7 +28,7 @@ Além de excluir registros duplicados, na etapa de preparação dos dados optei 
 
 ![Relação entre distância e preço da corrida](images/output1.png)
 
-Para minha surpresa, sem levar em conta outras dimensões, não apareceu nenhuma relação entre as variáveis distância e o preço pago por elas. Até foram aplicadas cores para as diferentes categorias de veículos para verificar a possibilidade de algum padrão aparente. Verificaremos a hora do dia a seguir.
+Para minha surpresa, sem levar em conta outras dimensões, não apareceu nenhuma relação entre as variáveis distância e o preço pago pela corrida. No gráfico acima foram até aplicadas cores para as diferentes categorias de veículos para verificar a possibilidade de algum padrão aparente, ainda sem resultados claros. Verificaremos a hora do dia a seguir.
 
 #### Quantidade de corridas por hora do dia
 
@@ -86,12 +86,12 @@ Caso no ano de 2024 (ano do nosso conjunto de dados) a inflação tenha aumentad
 
 #### Preço e localidade:
 
-O último suspiro: localidade. Talvez o local de início ou fim da corrida seja um fator determinante do preço. Aqui, utilizei o preço mediano (e não médio) para evitar distorções de possíveis anomalias (outliers).
+O último suspiro: localidade. Talvez o local de início ou fim da corrida seja um fator determinante do preço. Aqui, utilizei o preço mediano (e não médio) para evitar distorções de possíveis anomalias (outliers). Como o dataset continha 176 localidades possíveis na coluna "Pickup Location" e "Drop Location", utilizei um mapa de árvore (treemap) para tentar visualizar a relação entre localidade e preço, onde o tamanho do retângulo representa a quantidade de corridas e a cor representa o preço mediano. As plotagens representam um recorte de 40 localidades da amostragem:
 
 ![Preço e local de início](images/output10.png)
 ![Preço e local de fim](images/output11.png)
 
-Eureca! Tanto local de origem e o local de destino da corrida aparentemente têm forte relação com o preço da corrida. A empresa pode estar utilizando cidades e bairros como um fator de precificação.
+Eureca! Tanto local de origem e o local de destino da corrida aparentemente têm forte relação com o preço da corrida. Os dados sugerem que a empresa adota uma estratégia de precificação georreferenciada, baseada na segmentação por localidade.
 
 #### Preço e distância com uma mesma localidade de origem.
 
@@ -99,12 +99,12 @@ Eureca! Tanto local de origem e o local de destino da corrida aparentemente têm
 
 ![Preço e distância mas a partir de uma mesma localidade](images/output12.png)
 
-Foi selecionada aqui a localidade com maior mediana de preço (Okhla) e mais uma vez usada a mediana para evitar o efeito de outliers na média.
+Foi selecionada aqui a localidade com maior mediana de preço (Okhla) e mais uma vez usada a mediana para evitar o efeito de outliers presente nas médias.
 
 ### 💬 Considerações finais
 
 Essa foi uma viagem mais longa do que eu esperava. A análise exploratória de dados é um processo iterativo que nos mostra caminhos por onde não seguir tanto quanto caminhos por onde seguir. Optei por manter neste relatório também essas "frustrações" (falta de relação entre as variáveis) ao longo do percurso. No caso dessa base de dados da Uber, eu esperava encontrar relações nítidas entre o preço da corrida e variáveis como a distância ou o horário do dia, o que não aconteceu.
 
-Na presente análise, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e os dias de semana, que têm um valor maior nos sábados e domingos.
+Na presente análise, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e os dias da semana, que apresentam preços mais caros nos sábados e domingos.
 
 [Link do repositório no Github.](https://github.com/FelipeQue/SCTEC-desafio-opcional-ia)
