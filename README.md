@@ -1,28 +1,28 @@
 ### Atividade Prática do Curso Introdução à Inteligência Artificial
 
-# Análise Exploratória de Dados - Uber 
+# Análise Exploratória de Dados - 🚗 Uber 
 
 Este projeto é uma análise da [base de dados de reservas de corridas da empresa Uber no ano de 2024](https://www.kaggle.com/datasets/yashdevladdha/uber-ride-analytics-dashboard/data). O objetivo é realizar uma análise exploratória dos dados (AED) para apontar padrões e variáveis relevantes, como parte da atividade prática do curso de Introdução ao Data Science oferecido pelo Lab365 no contexto do programa SCTEC.
 
-### Bibliotecas e extensões utilizadas
+### 📚 Bibliotecas e extensões utilizadas
 
 Esta atividade foi realizada utilizando a linguagem Python e um ambiente virtual para o controle de bibliotecas. As bibliotecas utilizadas foram:
 - Pandas, para manipulação e análise de dados;
 - Matplotlib, biblioteca base para visualização de dados;
-- Seaborn, para visalizações das relações entre os dados;
+- Seaborn, para visualizações das relações entre os dados;
 - Squarify, para plotagem de um mapa de árvore (treemap) na análise de localidade.
 
-Optei por utilizar a extensão Jupyter Notebook no VS Code na realização análise, como forma de praticar o uso de notebooks (que foi a forma como o conteúdo foi apresentado nas aulas do curso, embora dentro do Kaggle).
+Optei por utilizar a extensão Jupyter Notebook no VS Code na realização análise, como forma de praticar o uso de notebooks (formato utilizado nas aulas do curso, embora via Kaggle).
 
-### Carregamento, reconhecimento e preparação dos dados
+### 📂 Carregamento, reconhecimento e preparação dos dados
 
 Os primeiros blocos do notebook carregam os dados em um dataframe e permitem conhecer suas informações, em especial quantidades de registros e colunas.
 
-A partir desse reconhecimento, a presente exploração de dados focou em entender quais variáveis estavam relacionadas e poderiam, portanto, serem potencialmente preditivas do preço de uma corrida do Uber.
+A partir desse reconhecimento, a presente exploração de dados focou em entender quais variáveis estavam relacionadas e poderiam, portanto, ser potencialmente preditivas do preço de uma corrida do Uber.
 
 Além de excluir registros duplicados, na etapa de preparação dos dados optei por eliminar as linhas em que o preço e a distância da corrida estavam nulos. Apesar de reduzir o número de registros disponíveis para análise, isso garantiu que cada ponto na análise de preço e distância fosse baseado em dados reais, evitando distorções que poderiam ser causadas por preenchimentos desses valores com a média ou mediana. A amostra continuou com um total de 102.000 registros.
 
-### Análise dos dados
+### 📊 Análise dos dados
 
 #### Preço da corrida e distância da corrida
 
@@ -52,7 +52,7 @@ Outra possibilidade de caráter temporal são os dias da semana. Aqui sim, final
 
 ![Quantidade de corridas por dia da semana](images/output5.png)
 
-A resposta para a pergunta anterior é que não, não existe aumento de demanda nos dias da semana. O aumento de preços nos sábados e domingos deve estar relacionado a outros fatores, como talvez a mera disposição para pagar mais nos fins de semana — explorada pela empresa.
+A resposta para a pergunta anterior é que não, não existe aumento de demanda nos fins de semana, conforme o gráfico acima mostra. O aumento de preços nos sábados e domingos deve estar relacionado a outros fatores, como talvez a mera disposição para pagar mais nos fins de semana — explorada pela empresa.
 
 #### Mapa de calor de correlação entre variáveis numéricas:
 
@@ -80,7 +80,7 @@ Nenhuma relação encontrada. A distância da corrida não tem relação com o p
 
 #### Preço e mês do ano:
 
-Caso no ano de 2024 (ano do nosso conjunto de dados) a inflação tenha aumentado significativamente os valores da corrida, não considerar os diferentes meses do ano poderiam nos impedir de perceber outros efeitos de relação. Novamente algo que se mostrou falso: não houve grandes tendências sazonais ou mensais.
+Caso no ano de 2024 (ano do nosso conjunto de dados) a inflação tenha aumentado significativamente os valores da corrida, não considerar os diferentes meses do ano poderia nos impedir de perceber outros efeitos de relação. Novamente algo que se mostrou falso: não houve grandes tendências sazonais ou mensais.
 
 ![Preço e mês do ano](images/output9.png)
 
@@ -101,13 +101,10 @@ Eureca! Tanto local de origem e o local de destino da corrida aparentemente têm
 
 Foi selecionada aqui a localidade com maior mediana de preço (Okhla) e mais uma vez usada a mediana para evitar o efeito de outliers na média.
 
-### Considerações finais
+### 💬 Considerações finais
 
 Essa foi uma viagem mais longa do que eu esperava. A análise exploratória de dados é um processo iterativo que nos mostra caminhos por onde não seguir tanto quanto caminhos por onde seguir. Optei por manter neste relatório também essas "frustrações" (falta de relação entre as variáveis) ao longo do percurso. No caso dessa base de dados da Uber, eu esperava encontrar relações nítidas entre o preço da corrida e variáveis como a distância ou o horário do dia, o que não aconteceu.
 
-Na presente análise, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e o os dias de semana, que têm um valor maior nos sábados e domingos.
+Na presente análise, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e os dias de semana, que têm um valor maior nos sábados e domingos.
 
 [Link do repositório no Github.](https://github.com/FelipeQue/SCTEC-desafio-opcional-ia)
-
-
-Obs.: Talvez vocês estranhem o uso da primeira pessoa do singular neste relatório. Esse uso é deliberado e não apenas um marcador acidental de informalidade. Em tempos de tantos conteúdos produzidos por inteligência artificial, considero pertinente demarcar a autoria humana. As inteligências artificiais generativas foram, no entanto (como vocês devem imaginar), amplamente recrutadas na etapa de sintaxe do código.
