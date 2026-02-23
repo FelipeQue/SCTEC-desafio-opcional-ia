@@ -103,8 +103,9 @@ Foi selecionada aqui a localidade com maior mediana de preço (Okhla) e mais uma
 
 ### 💬 Considerações finais
 
-Essa foi uma viagem mais longa do que eu esperava. A análise exploratória de dados é um processo iterativo que nos mostra caminhos por onde não seguir tanto quanto caminhos por onde seguir. Optei por manter neste relatório também essas "frustrações" (falta de relação entre as variáveis) ao longo do percurso. No caso dessa base de dados da Uber, eu esperava encontrar relações nítidas entre o preço da corrida e variáveis como a distância ou o horário do dia, o que não aconteceu.
+Essa foi uma viagem mais longa do que eu esperava, mesmo tendo feito um recorte bem específico (preço da corrida). A análise exploratória de dados é um processo iterativo que nos mostra caminhos por onde não seguir tanto ou bem mais do que caminhos por onde seguir. Por isso, optei por manter neste relatório também as ausências de relação entre as variáveis que surgiram ao longo do percurso. No caso da presente base de dados da Uber, eu esperava encontrar relações nítidas entre o preço da corrida e variáveis como a distância ou o horário do dia, o que não aconteceu.
 
-Na presente análise, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e os dias da semana, que apresentam preços mais caros nos sábados e domingos.
+Na presente análise, que não é exaustiva, os únicos fatores possivelmente preditivos do preço da corrida foram a localidade de início e fim da corrida e os dias da semana, que apresentam preços mais caros nos sábados e domingos.
+
 
 [Link do repositório no Github.](https://github.com/FelipeQue/SCTEC-desafio-opcional-ia)
